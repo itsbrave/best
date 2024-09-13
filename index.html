@@ -6,10 +6,32 @@
     <p>I do many baka stuff that will make u smile always. Happy anniversary, my love. Here's to forever. ❤️</p>
 </div>
 </div>
-<audio autoplay loop>
-  <source src="song.mp3" type="audio/mpeg">
-  Your browser does not support the audio tag.
+<audio id="background-audio" autoplay loop muted>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
 </audio>
+
+<!-- Button to unmute and control play/pause -->
+<button id="play-audio-btn">Unmute & Play Music</button>
+
+<script>
+    const audio = document.getElementById("background-audio");
+    const playButton = document.getElementById("play-audio-btn");
+
+    playButton.addEventListener('click', function() {
+        if (audio.muted) {
+            audio.muted = false; // Unmute the audio
+            audio.play();
+            playButton.textContent = 'Pause Music';
+        } else if (audio.paused) {
+            audio.play();
+            playButton.textContent = 'Pause Music';
+        } else {
+            audio.pause();
+            playButton.textContent = 'Play Music';
+        }
+    });
+</script>
 <script>
 function revealMessage() {
     document.getElementById('message').style.display = 'block';
