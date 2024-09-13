@@ -7,12 +7,26 @@
 </div>
 </div>
 <audio id="background-audio" autoplay loop muted>
-    <source src="song.mp3" type="audio/mpeg">
+    <source src="audio/song.mp3" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
 
-<!-- Button to unmute and control play/pause -->
+<!-- Button to Unmute and Play/Pause Audio -->
 <button id="play-audio-btn">Unmute & Play Music</button>
+
+<!-- Add some CSS to style and make the button visible -->
+<style>
+    #play-audio-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+</style>
 
 <script>
     const audio = document.getElementById("background-audio");
